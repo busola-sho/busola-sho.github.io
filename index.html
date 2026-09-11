@@ -6,32 +6,40 @@ layout: default
 <section class="section" id="about">
   <p class="section__label">about</p>
   <div class="about-text">
-    <p class="about-intro">Hi, I'm Busolami <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 300; color: var(--ink-dark);">(boo · so · lah · me)</span></p>
-    <p>
-      I am an MPhil student at the University of Cambridge, on the Speech and Language 
-      Processing track of the Machine Learning and Machine Intelligence programme, 
-      supported by the Mastercard Foundation Scholarship.
+    <p class="about-intro">
+      Hi, I'm Busolami
+      <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 300; color: var(--ink-dark);">
+        (boo · so · lah · me)
+      </span>
     </p>
+
     <p>
-      I am drawn to research at the intersection of technology and people, specifically 
-      the questions that arise when ML systems meet the real world: who do they work for, 
-      how reliably, and under what conditions. My research interests are:
+      I recently completed an MPhil in Machine Learning and Machine Intelligence at the
+      University of Cambridge, where I focused on Speech and Language Processing. Before
+      Cambridge, I spent over a year working as a software engineer at an early-stage
+      technology startup.
     </p>
-    <ul>
-      <li>Trustworthy and calibrated ML</li>
-      <li>Evaluation and oversight of AI systems in high-stakes deployment</li>
-      <li>Speech and language processing</li>
-      <li>Low-resource and multilingual NLP</li>
-      <li>AI alignment, particularly scalable oversight and evaluation for increasingly capable systems</li>
-    </ul>
+
     <p>
-      That same motivation shows up beyond research too. Since undergrad, I have been building 
-  and engaging with technical communities across Africa, with a particular interest in 
-  creating spaces where people can learn and grow technically. I graduated with a First Class in 
-  Computer Science from Covenant University, Nigeria, as a Generation Google Scholar.
+      I’m particularly interested in research engineering: building machine learning systems,
+      understanding how they behave, evaluating them carefully, and turning research ideas into
+      reliable software. My current interests include NLP and LLMs, AI evaluation, trustworthy
+      machine learning, and high-stakes deployment.
     </p>
-    <p>Long-term, I want to be where the groundbreaking scientific work happens, and to help build 
-  the conditions and rigorous systems for more people to get there too.</p>
+
+    <p>
+      I’m also deliberately strengthening my software engineering foundations, particularly
+      around backend systems, testing, debugging, and building software that other people can
+      depend on. I enjoy work that sits somewhere between research and engineering, but I’m
+      equally interested in becoming a stronger software engineer in my own right.
+    </p>
+
+    <p>
+      My MPhil dissertation brought a lot of these interests together. I worked with Police
+      Scotland on trustworthy speech recognition for policing, exploring multi-model ASR,
+      LLM-based fusion, meaning-aware evaluation, and confidence estimates for human review.
+    </p>
+
     <div class="about-links">
       <a href="https://github.com/Olubusolami-R" target="_blank" rel="noopener">github</a>
       <a href="https://linkedin.com/in/olubusolami-sogunle" target="_blank" rel="noopener">linkedin</a>
@@ -41,18 +49,42 @@ layout: default
 
 <!-- RESEARCH -->
 <section class="section" id="research">
-  <p class="section__label">research/projects</p>
+  <p class="section__label">projects</p>
   <div class="row-list">
 
     <div class="row">
       <p class="row__date">2026</p>
-      <p class="row__title">Trustworthy Multi-model Transcription with Calibrated Uncertainty</p>
-      <p class="row__desc">MPhil dissertation. A transcription pipeline combining multiple ASR models with calibrated confidence estimates for high-stakes deployment.</p>
+      <p class="row__title">Trustworthy ASR for High-Stakes Transcription</p>
+      <p class="row__desc">
+        MPhil dissertation with Police Scotland. Built a four-model ASR ensemble and evaluated
+        LLM-based fusion for high-stakes transcription, where standard Word Error Rate can miss
+        meaning-altering errors. Developed a five-level meaning-alteration metric, validated seven
+        LLM judges against human labels, and added sentence-level confidence to support human review.
+        The best fusion approach improved meaning preservation on operational police audio from
+        6% to 13%.
+      </p>
       <div class="row__tags">
-        <span class="row__tag">asr</span>
-        <span class="row__tag">uncertainty estimation</span>
+        <span class="row__tag">speech</span>
+        <span class="row__tag">llms</span>
+        <span class="row__tag">evaluation</span>
         <span class="row__tag">trustworthy ml</span>
       </div>
+    </div>
+    <div class="row">
+      <p class="row__date">2026</p>
+      <p class="row__title">Email Copilot V2</p>
+      <p class="row__desc">
+        Built a Chrome extension and FastAPI backend for generating contextual email replies,
+        with configurable local and hosted LLM inference. Added Docker support and mocked LLM
+        tests for reproducible development.
+      </p>
+      <div class="row__tags">
+        <span class="row__tag">python</span>
+        <span class="row__tag">fastapi</span>
+        <span class="row__tag">docker</span>
+        <span class="row__tag">llms</span>
+      </div>
+      <a class="row__link" href="https://github.com/busola-sho/email-copilot-v2" target="_blank" rel="noopener">github →</a>
     </div>
 
     <div class="row">
@@ -66,32 +98,6 @@ layout: default
       </div>
       <a class="row__link" href="https://github.com/Olubusolami-R/multilingual-climate-messaging-dataset" target="_blank" rel="noopener">github →</a>
     </div>
-
-<div class="row">
-  <p class="row__date">2025</p>
-  <p class="row__title">ASR Fine-tuning: Wav2Vec2 and WavLM on LibriSpeech</p>
-  <p class="row__desc">Fine-tuning experiments comparing Wav2Vec2 and WavLM for ASR on the LibriSpeech 10-hour subset. Explored model architecture, layer selection, freezing strategies, and learning rate schedules. Best result: 10.62% test-clean WER using a frozen WavLM backbone with a two-layer feedforward head and the masking hyperparameters from the WavLM paper.</p>
-  <div class="row__tags">
-    <span class="row__tag">asr</span>
-    <span class="row__tag">self-supervised learning</span>
-    <span class="row__tag">wav2vec2</span>
-    <span class="row__tag">wavlm</span>
-  </div>
-  <a class="row__link" href="https://github.com/Olubusolami-R/wav2vec2-wavlm-asr" target="_blank" rel="noopener">github →</a>
-</div>
-
-    <div class="row">
-      <p class="row__date">2025</p>
-      <p class="row__title">Probabilistic Ranking of Tennis Players</p>
-      <p class="row__desc">Implemented Metropolis-Hastings MCMC and Expectation Propagation to infer player skills from 1,801 match outcomes. EP achieves comparable accuracy to MCMC 890x faster.</p>
-      <div class="row__tags">
-        <span class="row__tag">bayesian inference</span>
-        <span class="row__tag">mcmc</span>
-      </div>
-      <a class="row__link" href="https://github.com/Olubusolami-R/prob-ranking" target="_blank" rel="noopener">github →</a>
-    </div>
-
-  </div>
 </section>
 
 <!-- COMMUNITY -->
@@ -153,7 +159,9 @@ layout: default
   <p class="section__label">contact</p>
   <div>
     <p class="contact-text">
-      Happy to talk about research, collaborations, or opportunities in speech and language ML. Feel free to reach out if you want to chat about anything at the intersection of technology/ML and people, or just say hi!
+      Happy to talk about research engineering, software engineering, machine learning,
+      evaluations, collaborations, or interesting technical problems. Feel free to reach out
+      if you'd like to chat or just say hi!
     </p>
     <div class="contact-rows">
       <div class="contact-row">
